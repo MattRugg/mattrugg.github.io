@@ -475,7 +475,7 @@
                             <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
                                 <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
                             </svg>
-                        </a>-->
+                        </a> -->
                     </div>
                 </div>
 
@@ -579,50 +579,6 @@
                 backToTopButton.style.visibility = 'hidden';
             }
         });
-
-        let noise = new SimplexNoise();
-
-        function draw(e) {
-            let xCount = 40;
-            let yCount = 60;
-            let iXCount = 1 / (xCount - 1);
-            let iYCount = 1 / (yCount - 1);
-            let time = e * 0.001;
-            let timeStep = 0.01;
-            let grad = ctx.createLinearGradient(-width, 0, width, height);
-            let t = time % 1;
-            let tSide = floor(time % 2) === 0;
-            let hueA = tSide ? 340 : 210;
-            let hueB = !tSide ? 340 : 210;
-            let colorA = hsl(hueA, 100, 50);
-            let colorB = hsl(hueB, 100, 50);
-            grad.addColorStop(map(t, 0, 1, THIRD, ZERO), colorA);
-            grad.addColorStop(map(t, 0, 1, TWO_THIRDS, THIRD), colorB);
-            grad.addColorStop(map(t, 0, 1, ONE, TWO_THIRDS), colorA);
-            ctx.globalAlpha = map(cos(time), -1, 1, 0.15, 0.3);
-            background(grad);
-            ctx.globalAlpha = 1;
-            beginPath();
-
-            for(let j = 0; j < yCount; j++) {
-                let tj = j * iYCount;
-                let c = cos(tj * TAU + time) * 0.1;
-                for(let i = 0; i < xCount; i++) {
-                    let t = i * iXCount;
-                    let n = noise.noise3D(t, time, c);
-                    let y = n * height_half;
-                    let x = t * (width + 20) - width_half - 10;
-                    (i ? lineTo : moveTo)(x, y);
-                }
-                time += timeStep;
-            }
-
-            compositeOperation(compOper.lighter);
-            ctx.filter = 'blur(10px)';
-            stroke(grad, 5);
-            ctx.filter = 'none';
-            stroke(hsl(0, 0, 100, 0.8), 2);
-        }
 
         // Initialize back to top button state
         document.getElementById('back-to-top').style.transition = 'opacity 0.3s, visibility 0.3s';
