@@ -351,7 +351,7 @@
             <!-- Contact Form -->
             <div class="max-w-4xl mx-auto">
                 <div class="bg-white rounded-lg shadow-lg p-8 md:p-12">
-                    <form class="space-y-6">
+                    <form class="space-y-6" id="contact-form">
                         <!-- Name and Email Row -->
                         <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                             <div>
@@ -411,6 +411,42 @@
                             </button>
                         </div>
                     </form>
+                    <div id="form-status" class="mt-4 text-center text-lg font-semibold"></div>
+                    <script>
+                    document.addEventListener('DOMContentLoaded', function() {
+                        const form = document.getElementById('contact-form');
+                        const statusDiv = document.getElementById('form-status');
+                        form.addEventListener('submit', async function(e) {
+                            e.preventDefault();
+                            statusDiv.textContent = '';
+                            const data = new FormData(form);
+                            const payload = new URLSearchParams();
+                            payload.append('entry.640851491', data.get('name'));
+                            payload.append('entry.138406807', data.get('email'));
+                            payload.append('entry.1020137889', data.get('company'));
+                            payload.append('entry.394473990', data.get('phone'));
+                            payload.append('entry.2080428320', data.get('subject'));
+                            payload.append('entry.279391259', data.get('message'));
+                            payload.append('submissionTimestap', Date.now().toString());
+                            try {
+                                const resp = await fetch('https://docs.google.com/forms/u/0/d/e/1FAIpQLSfIAqrnAMrnQuqFDw4bv-UjOmR3i4HM1d8pGTSzuL710jC12Q/formResponse', {
+                                    method: 'POST',
+                                    mode: 'no-cors',
+                                    headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+                                    body: payload.toString()
+                                });
+                                form.reset();
+                                statusDiv.textContent = 'Thank you! Your message has been sent.';
+                                statusDiv.classList.remove('text-red-600');
+                                statusDiv.classList.add('text-green-600');
+                            } catch (err) {
+                                statusDiv.textContent = 'Sorry, there was a problem sending your message.';
+                                statusDiv.classList.remove('text-green-600');
+                                statusDiv.classList.add('text-red-600');
+                            }
+                        });
+                    });
+                    </script>
                 </div>
             </div>
 
