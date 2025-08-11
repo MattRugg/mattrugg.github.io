@@ -586,6 +586,8 @@
     <script src="shader-bg.js"></script>
     <script src="shader-bg-legacy.js"></script>
     <script>
+        loadFragment('shader.frag');
+        
         // Mobile menu toggle functionality
         document.getElementById('mobile-menu-button').addEventListener('click', function() {
             const mobileMenu = document.getElementById('mobile-menu');
