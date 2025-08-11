@@ -24,27 +24,20 @@ float linez (in vec2 uv) {
   // Make bars 50% longer at the center (uv.y = 0)
   float centerScale = 0.3 - 0.5 * (1.0 - abs(uv.x)); // 1.5 at center, 1.0 at top/bottom
   const float baseHeight = 0.5;
-  const float size = 0.06;
-  const float halfsize = 0.5 * size;
+  const float size = 0.03;
+  const float halfsize = 0.3 * size;
 
   float c = floor((q.x + halfsize) / size);
   q.x = mod(q.x + halfsize, size) - halfsize;
   q.y -= 0.3 ;
   q.y *= 0.5 * centerScale;
   q.y -= 0.1 * cnoise2(vec2(c, sin(cosT + c)));
-  q.y -= 0.01 * sin(3.0 * cosT + 0.1 * c);
 
   const float border = 0.2 * size;
   float v = smoothstep(halfsize - border, halfsize - border - edge, abs(q.x));
-  v *= smoothstep(baseHeight + edge, baseHeight, abs(q.y));
 
   // Apply vertical fade to the bar itself (top/bottom 10% of bar height)
-  float normY = (q.y + baseHeight) / (2.0 * baseHeight); // 0 at bottom, 1 at top of bar
-  float fade = 1.0;
-  if (v > 0.0) {
-    fade = smoothstep(0.0, 0.5, normY);
-  }
-  v *= fade * 0.4;
+  v *= 0.6;
   return v;
 }
 
