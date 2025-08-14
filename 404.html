@@ -41,6 +41,25 @@
     <script src="shader-bg.js"></script>
     <script>
         loadFragment('shader-404.frag');
+
+        // Send 404 error details to Google Forms
+        (function() {
+            var url = 'https://docs.google.com/forms/u/0/d/e/1FAIpQLSc_lNTIEZ1hWdlhhbM_xdHrhOAEaaGBg-BH6tBpyejbIz77nQ/formResponse';
+            var payload = new URLSearchParams();
+            payload.append('entry.827354955', window.location.href);
+            payload.append('entry.1728640278', window.performance && window.performance.getEntriesByType ? (window.performance.getEntriesByType('navigation')[0]?.type === 'reload' ? 'GET' : (window.performance.getEntriesByType('navigation')[0]?.type || 'GET')) : 'GET');
+            payload.append('submissionTimestamp', Date.now().toString());
+            try {
+                fetch(url, {
+                    method: 'POST',
+                    mode: 'no-cors',
+                    headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+                    body: payload.toString()
+                });
+            } catch (err) {
+                // Silently fail
+            }
+        })();
     </script>
 </body>
 </html>
