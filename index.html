@@ -624,7 +624,10 @@
     <script src="shader-bg.js"></script>
     <script src="shader-bg-legacy.js"></script>
     <script>
-        loadFragment('shader.frag');
+        // Randomize shader selection
+        const shaders = ['shader-horz-wave.frag', 'shader.frag'];
+        const selectedShader = shaders[Math.floor(Math.random() * shaders.length)];
+        loadFragment(selectedShader);
         
         // Mobile menu toggle functionality
         document.getElementById('mobile-menu-button').addEventListener('click', function() {
