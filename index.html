@@ -8,20 +8,20 @@
         <meta name="keywords" content="electronics development, hardware, firmware, IoT, RF, compliance, embedded security, Australia, boutique, mcro">
         <meta name="author" content="mcro. Boutique Electronics">
         <link rel="canonical" href="https://mcro.au/">
-        <link rel="icon" type="image/png" href="logo.symbol.png">
-        <link rel="icon" type="image/svg+xml" href="logo.symbol.svg">
+        <link rel="icon" type="image/png" href="img/logo.symbol.png">
+        <link rel="icon" type="image/svg+xml" href="img/logo.symbol.svg">
         <!-- Open Graph / Facebook -->
         <meta property="og:type" content="website">
         <meta property="og:url" content="https://mcro.au/">
         <meta property="og:title" content="Boutique Electronics Development | mcro. Australia">
         <meta property="og:description" content="Boutique electronics development in Australia. Innovative hardware, firmware, IoT, RF, compliance, and embedded security solutions for businesses and startups.">
-        <meta property="og:image" content="https://mcro.au/logo.png">
+        <meta property="og:image" content="https://mcro.au/img/logo.png">
         <!-- Twitter Card -->
         <meta name="twitter:card" content="summary_large_image">
         <meta name="twitter:url" content="https://mcro.au/">
         <meta name="twitter:title" content="Boutique Electronics Development | mcro. Australia">
         <meta name="twitter:description" content="Boutique electronics development in Australia. Innovative hardware, firmware, IoT, RF, compliance, and embedded security solutions for businesses and startups.">
-        <meta name="twitter:image" content="https://mcro.au/logo.png">
+        <meta name="twitter:image" content="https://mcro.au/img/logo.png">
         <!-- Structured Data -->
         <script type="application/ld+json">
         {
@@ -29,7 +29,7 @@
             "@type": "Organization",
             "name": "mcro. Boutique Electronics",
             "url": "https://mcro.au/",
-            "logo": "https://mcro.au/logo.png",
+            "logo": "https://mcro.au/img/logo.png",
             "contactPoint": {
                 "@type": "ContactPoint",
                 "email": "hello@mcro.au",
@@ -59,7 +59,7 @@
             z-index: 1;
         }
     </style>
-    <link rel="stylesheet" href="shader-bg.css">
+    <link rel="stylesheet" href="css/shader-bg.css">
 </head>
 <body>
     <!-- Fixed Navigation Menu -->
@@ -68,7 +68,7 @@
             <div class="flex justify-between items-center h-16 px-4">
                 <!-- Logo -->
                 <div class="flex items-center">
-                    <img class="h-8 w-auto" src="logo.png" alt="mcro. logo">
+                    <img class="h-8 w-auto" src="img/logo.png" alt="mcro. logo">
                     <!-- <span class="ml-2 text-xl font-bold text-gray-800">mcro.</span> -->
                 </div>
 
@@ -103,7 +103,7 @@
         <div class="container mx-auto px-4">
             <canvas id="shader-canvas" class="bg-[#f1f1f1]"></canvas>
             <div id="content" class="relative z-10 flex flex-col md:flex-row items-center justify-center md:justify-between md:items-center gap-8 max-w-4xl mx-auto px-0 w-full">
-                <img src="uc-board-transp.png" alt="Feature Board"
+                <img src="img/uc-board-transp.png" alt="Feature Board"
                     class="w-full max-w-xs md:max-w-sm lg:max-w-md drop-shadow-2xl rounded-lg object-contain md:object-left mx-auto md:mx-0 mb-8 md:mb-0" style="background:transparent;" loading="lazy">
                 <div class="flex-1 text-left w-full md:w-auto">
                     <h1 class="text-5xl md:text-6xl lg:text-6xl font-bold text-gray-800 mb-6 drop-shadow-md">
@@ -531,7 +531,7 @@
                 <!-- Company Info -->
                 <div class="lg:col-span-2">
                     <div class="flex items-center mb-4">
-                        <img class="h-8 w-auto" src="logo.dark.png" alt="mcro. logo">
+                        <img class="h-8 w-auto" src="img/logo.dark.png" alt="mcro. logo">
                         <!-- <span class="ml-2 text-xl font-bold">mcro.</span> -->
                     </div>
                     <p class="text-gray-300 mb-6 max-w-md">
@@ -621,11 +621,11 @@
         </div>
     </footer>
 
-    <script src="shader-bg.js"></script>
-    <script src="shader-bg-legacy.js"></script>
+    <script src="js/shader-bg.js"></script>
+    <script src="js/shader-bg-legacy.js"></script>
     <script>
         // Randomize shader selection
-        loadFragment('shader.frag');
+        loadFragment('img/shader.frag');
         
         // Mobile menu toggle functionality
         document.getElementById('mobile-menu-button').addEventListener('click', function() {
