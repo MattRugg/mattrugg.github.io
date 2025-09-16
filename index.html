@@ -59,7 +59,6 @@
             z-index: 1;
         }
     </style>
-    <link rel="stylesheet" href="css/shader-bg.css">
 </head>
 <body>
     <!-- Fixed Navigation Menu -->
@@ -99,20 +98,19 @@
     </nav>
 
     <!-- Hero Section -->
-    <section id="shader-div" class="pb-10 pt-32 lg:py-40">
+    <section class="pb-10 pt-32 lg:py-40 lg:pb-32" style=" background: no-repeat url(img/bg-abstract.png) #f1f1f1; background-size: auto 100%; width: 100%; height: 100%; position: relative;overflow: hidden;">
         <div class="container mx-auto px-10">
-            <canvas id="shader-canvas" class="bg-[#f1f1f1]"></canvas>
-            <div id="content" class="relative z-10 grid grid-cols-1 lg:grid-cols-2 items-center gap-8 max-w-4xl mx-auto px-0 w-full">
+            <div class="relative z-10 grid grid-cols-1 lg:grid-cols-2 items-center gap-24 max-w-6xl mx-auto px-0 w-full">
                 <div class="flex justify-center lg:justify-end">
                     <img src="img/uc-board-transp.png" alt="Feature Board"
-                        class="w-full max-w-xs md:max-w-sm lg:max-w-md drop-shadow-2xl rounded-lg object-contain md:object-left mb-8 md:mb-0" style="background:transparent;" loading="lazy">
+                        class="w-full max-w-xs md:max-w-sm lg:max-w-md drop-shadow-[0_40px_40px_rgba(0,0,0,0.35)] rounded-lg object-contain md:object-left mb-8 md:mb-0" style="background:transparent;" loading="lazy">
                 </div>
                 <div class="flex flex-col justify-center w-full md:w-auto">
-                    <h1 class="text-5xl md:text-6xl font-bold text-gray-800 mb-6 drop-shadow-md text-center lg:text-left">
+                    <h1 class="text-5xl md:text-6xl font-bold text-gray-800 mb-6 drop-shadow-md text-left md:text-center lg:text-left">
                         Boutique Electronics Development
                     </h1>
                     <div class="max-w-3xl mx-auto md:mx-0">
-                        <p class="text-xl md:text-2xl text-gray-600 leading-relaxed drop-shadow text-center lg:text-left">
+                        <p class="text-xl md:text-2xl text-gray-600 leading-relaxed drop-shadow text-left md:text-center lg:text-left">
                             We craft innovative electronic solutions tailored to your vision. From concept to prototype to production, our expert team delivers cutting-edge hardware and firmware development for businesses ready to bring their ideas to life.
                         </p>
                     </div>
@@ -136,8 +134,8 @@
                 <!-- Mixed-Signal Design -->
                 <div class="overflow-hidden">
                     <div class="flex items-center p-6 pb-3">
-                        <div class="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center mr-4">
-                            <svg class="w-5 h-5 text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <div class="w-10 h-10 bg-[#EFBF04] rounded-lg flex items-center justify-center mr-4">
+                            <svg class="w-5 h-5 text-gray-800" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
                             </svg>
                         </div>
@@ -153,8 +151,8 @@
                 <!-- SoM Integration -->
                 <div class="overflow-hidden">
                     <div class="flex items-center p-6 pb-3">
-                        <div class="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center mr-4">
-                            <svg class="w-5 h-5 text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <div class="w-10 h-10 bg-[#EFBF04] rounded-lg flex items-center justify-center mr-4">
+                            <svg class="w-5 h-5 text-gray-800" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"></path>
                             </svg>
                         </div>
@@ -170,8 +168,8 @@
                 <!-- Full-Stack IoT Solutions -->
                 <div class="overflow-hidden">
                     <div class="flex items-center p-6 pb-3">
-                        <div class="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center mr-4">
-                            <svg class="w-5 h-5 text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <div class="w-10 h-10 bg-[#EFBF04] rounded-lg flex items-center justify-center mr-4">
+                            <svg class="w-5 h-5 text-gray-800" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9"></path>
                             </svg>
                         </div>
@@ -187,8 +185,8 @@
                 <!-- Compliance Support -->
                 <div class="overflow-hidden">
                     <div class="flex items-center p-6 pb-3">
-                        <div class="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center mr-4">
-                            <svg class="w-5 h-5 text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <div class="w-10 h-10 bg-[#EFBF04] rounded-lg flex items-center justify-center mr-4">
+                            <svg class="w-5 h-5 text-gray-800" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path>
                             </svg>
                         </div>
@@ -204,8 +202,8 @@
                 <!-- RF Solutions -->
                 <div class="overflow-hidden">
                     <div class="flex items-center p-6 pb-3">
-                        <div class="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center mr-4">
-                            <svg class="w-5 h-5 text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <div class="w-10 h-10 bg-[#EFBF04] rounded-lg flex items-center justify-center mr-4">
+                            <svg class="w-5 h-5 text-gray-800" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.111 16.404a5.5 5.5 0 017.778 0M12 20h.01m-7.08-7.071c3.904-3.905 10.236-3.905 14.141 0M1.394 9.393c5.857-5.857 15.355-5.857 21.213 0"></path>
                             </svg>
                         </div>
@@ -221,8 +219,8 @@
                 <!-- Embedded Security -->
                 <div class="overflow-hidden">
                     <div class="flex items-center p-6 pb-3">
-                        <div class="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center mr-4">
-                            <svg class="w-5 h-5 text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <div class="w-10 h-10 bg-[#EFBF04] rounded-lg flex items-center justify-center mr-4">
+                            <svg class="w-5 h-5 text-gray-800" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"></path>
                             </svg>
                         </div>
@@ -253,8 +251,8 @@
             <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
                 <!-- Traditional Contract -->
                 <div class="bg-[#f1f1f1] rounded-lg p-8 text-center">
-                    <div class="w-16 h-16 bg-white rounded-full flex items-center justify-center mx-auto mb-6">
-                        <svg class="w-8 h-8 text-black" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <div class="w-16 h-16 bg-gray-800 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <svg class="w-8 h-8 text-[#EFBF04]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
                         </svg>
                     </div>
@@ -288,8 +286,8 @@
 
                 <!-- Fixed Scope Contract -->
                 <div class="bg-[#f1f1f1] rounded-lg p-8 text-center">
-                    <div class="w-16 h-16 bg-white rounded-full flex items-center justify-center mx-auto mb-6">
-                        <svg class="w-8 h-8 text-black" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <div class="w-16 h-16 bg-gray-800 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <svg class="w-8 h-8 text-[#EFBF04]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"></path>
                         </svg>
                     </div>
@@ -324,8 +322,8 @@
 
                 <!-- Equity Exchange -->
                 <div class="bg-[#f1f1f1] rounded-lg p-8 text-center">
-                    <div class="w-16 h-16 bg-white rounded-full flex items-center justify-center mx-auto mb-6">
-                        <svg class="w-8 h-8 text-black" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <div class="w-16 h-16 bg-gray-800 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <svg class="w-8 h-8 text-[#EFBF04]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
                         </svg>
                     </div>
@@ -495,7 +493,7 @@
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-8 text-center">
                     <div class="p-6">
                         <div class="w-12 h-12 bg-gray-800 rounded-full flex items-center justify-center mx-auto mb-4">
-                            <svg class="w-6 h-6 text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <svg class="w-6 h-6 text-[#EFBF04]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
                             </svg>
                         </div>
@@ -513,7 +511,7 @@
                     </div>-->
                     <div class="p-6">
                         <div class="w-12 h-12 bg-gray-800 rounded-full flex items-center justify-center mx-auto mb-4">
-                            <svg class="w-6 h-6 text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <svg class="w-6 h-6 text-[#EFBF04]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
                             </svg>
                         </div>
@@ -612,7 +610,7 @@
                             <a href="#" class="text-gray-400 hover:text-white transition duration-300">Cookie Policy</a>
                         </div>
                         <!-- Back to Top Button -->
-                        <button id="back-to-top" class="bg-white hover:bg-gray-300 text-black p-2 rounded-full transition duration-300 focus:outline-none focus:ring-2 focus:ring-gray-300 focus:ring-offset-2 focus:ring-offset-gray-900">
+                        <button id="back-to-top" class="bg-white hover:bg-[#EFBF04] text-black p-2 rounded-full transition duration-300 focus:outline-none focus:ring-2 focus:ring-gray-300 focus:ring-offset-2 focus:ring-offset-gray-900">
                             <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 10l7-7m0 0l7 7m-7-7v18"></path>
                             </svg>
@@ -622,13 +620,7 @@
             </div>
         </div>
     </footer>
-
-    <script src="js/shader-bg.js"></script>
-    <script src="js/shader-bg-legacy.js"></script>
-    <script>
-        // Randomize shader selection
-        loadFragment('img/shader.frag');
-        
+    <script>      
         // Mobile menu toggle functionality
         document.getElementById('mobile-menu-button').addEventListener('click', function() {
             const mobileMenu = document.getElementById('mobile-menu');
