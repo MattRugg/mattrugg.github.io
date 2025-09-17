@@ -49,6 +49,13 @@
         .contact-bg {
             background: linear-gradient(145deg, #f1f1f1 50%, #bbb 100%);
         }
+        .price-bg {
+            background-image: linear-gradient(145deg,#fafafa 0%, #eaeaea 50%, #fafafa 100%);
+            transition: all 0.3s ease;
+        }
+        .price-bg:hover {
+            transform: translateY(-5px);
+        }
         .hero-bg {
             background: no-repeat url(img/bg-abstract.png) #f1f1f1; 
             transition: background-position 0.4s ease;
@@ -254,16 +261,16 @@
             </div>
 
             <!-- Pricing Models Grid -->
-            <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 max-w-6xl mx-auto px-10">
                 <!-- Traditional Contract -->
-                <div class="bg-[#f1f1f1] rounded-lg p-8 text-center">
+                <div class="price-bg rounded-lg p-8 text-center shadow-lg">
                     <div class="w-16 h-16 bg-gray-800 rounded-full flex items-center justify-center mx-auto mb-6">
                         <svg class="w-8 h-8 text-[#EFBF04]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
                         </svg>
                     </div>
                     <h3 class="text-2xl font-bold text-gray-800 mb-4">Time & Materials</h3>
-                    <p class="text-gray-600 mb-6 leading-relaxed">
+                    <p class="text-gray-600 mb-6 leading-relaxed border-b border-gray-300 pb-6">
                         Traditional hourly-based engagement with transparent billing. Perfect for projects requiring flexibility and iterative development with evolving requirements.
                     </p>
                     <div class="space-y-3 mb-8">
@@ -291,7 +298,7 @@
                 </div>
 
                 <!-- Fixed Scope Contract -->
-                <div class="bg-[#f1f1f1] rounded-lg p-8 text-center">
+                <div class="price-bg rounded-lg p-8 text-center shadow-lg">
                     <div class="w-16 h-16 bg-gray-800 rounded-full flex items-center justify-center mx-auto mb-6">
                         <svg class="w-8 h-8 text-[#EFBF04]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"></path>
@@ -299,7 +306,7 @@
                     </div>
                     <!--<div class="bg-blue-600 text-white text-xs px-3 py-1 rounded-full inline-block mb-4">MOST POPULAR</div>-->
                     <h3 class="text-2xl font-bold text-gray-800 mb-4">Fixed Price Project</h3>
-                    <p class="text-gray-600 mb-6 leading-relaxed">
+                    <p class="text-gray-600 mb-6 leading-relaxed border-b border-gray-300 pb-6">
                         Clearly defined scope with a fixed budget and timeline. Ideal for well-defined projects with specific deliverables and established requirements.
                     </p>
                     <div class="space-y-3 mb-8">
@@ -327,14 +334,14 @@
                 </div>
 
                 <!-- Equity Exchange -->
-                <div class="bg-[#f1f1f1] rounded-lg p-8 text-center">
+                <div class="price-bg rounded-lg p-8 text-center shadow-lg">
                     <div class="w-16 h-16 bg-gray-800 rounded-full flex items-center justify-center mx-auto mb-6">
                         <svg class="w-8 h-8 text-[#EFBF04]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
                         </svg>
                     </div>
                     <h3 class="text-2xl font-bold text-gray-800 mb-4">Equity Partnership</h3>
-                    <p class="text-gray-600 mb-6 leading-relaxed">
+                    <p class="text-gray-600 mb-6 leading-relaxed border-b border-gray-300 pb-6">
                         Strategic partnership model where we invest our expertise in exchange for equity or revenue sharing. Perfect for startups with limited capital but strong potential.
                     </p>
                     <div class="space-y-3 mb-8">
